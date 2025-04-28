@@ -1,29 +1,23 @@
-import { PlusIcon } from "@radix-ui/react-icons"
-import { Box, Heading, Flex, Button } from "@radix-ui/themes"
+import { Box, Heading, Flex } from "@radix-ui/themes";
+import { CreateTaskForm } from "./components/CreateTaskForm";
+import "@radix-ui/themes/styles.css";
+import { TaskBoard } from "./components/TaskBoard";
 
 function App() {
-
   return (
-    <>
     <Box maxWidth="80rem" mx="auto">
       <Box height="4rem">
-     <Flex align="center" gap="5" height="100%">
-      <Heading as="h1">
-        React Kanban
-      </Heading>
-      <Button>
-        <PlusIcon/> Nova tarefa
-      </Button>
-      </Flex>   
+        <Flex align="center" gap="5" height="100%">
+          <Heading as="h1">React Kanban</Heading>
+          <CreateTaskForm />
+        </Flex>
+      </Box>
+      <Box>
+        <Heading as="h2">Quadro de Tarefas</Heading>
+        <TaskBoard/>
+      </Box>
     </Box>
-    <Box>
-      <Heading as="h2">
-        Quadro de Tarefas
-      </Heading>
-     </Box>
-    </Box>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
