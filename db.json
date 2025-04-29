@@ -1,12 +1,51 @@
 {
-    "tasks": [
-        {
-            "id" : 1,
-            "title" : "enviar relatorio",
-            "description": "enviar o relatorio semanal",
-            "status": "doing",
-            "priority": "high"
-
-        }
-    ]
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Enviar relatório",
+      "description": "Enviar o relatório semanal para o gerente",
+      "status": "doing",
+      "priority": "high"
+    },
+    {
+      "status": "doing",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "title": "Corrigir bugs",
+      "description": "Resolver os bugs reportados no sistema de vendas",
+      "status": "doing",
+      "priority": "high"
+    },
+    {
+      "status": "doing",
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "title": "Revisar código",
+      "description": "Revisar os PRs abertos no repositório do projeto",
+      "status": "done",
+      "priority": "medium"
+    },
+    {
+      "status": "doing",
+      "id": "6"
+    },
+    {
+      "id": "7",
+      "title": "Backup do servidor",
+      "description": "Realizar backup semanal do servidor de produção",
+      "status": "done",
+      "priority": "low"
+    },
+    {
+      "id": "8",
+      "title": "Criar protótipo",
+      "description": "Desenvolver protótipo da nova aplicação móvel",
+      "status": "doing",
+      "priority": "medium"
+    }
+  ]
 }

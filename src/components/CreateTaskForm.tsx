@@ -13,6 +13,7 @@ import {
 import "@radix-ui/themes/styles.css";
 import { FormEventHandler } from "react";
 import { z } from "zod";
+import { useTasks } from "../hooks/useTasks";
 
 const CreatTaskSchema = z.object({
    title: z.string(),
@@ -21,6 +22,7 @@ const CreatTaskSchema = z.object({
    priority: z.enum(["low", "medium", "high"])
 })
 export const CreateTaskForm: React.FC = () => {
+const {createTask} = useTasks()
 
 const handleSubmit: FormEventHandler <HTMLFormElement> = async (ev) =>{
   ev.preventDefault()
@@ -36,7 +38,7 @@ const handleSubmit: FormEventHandler <HTMLFormElement> = async (ev) =>{
   ev.currentTarget.reset()
   
   const taskData = CreatTaskSchema.parse({title, description, status, priority})
-  alert(JSON.stringify(taskData))
+await createTask(taskData)
   
 }
 
